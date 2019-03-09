@@ -3,6 +3,7 @@ import xml.etree.ElementTree as ET
 from datetime import datetime
 
 filenames = [line.rstrip('\n') for line in open('xml_filenames.txt')]
+#filenames = [line.rstrip('\n') for line in open('xml_filenames_full.txt')]
 for file in filenames:
 	tree = ET.parse(file)
 
