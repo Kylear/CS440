@@ -4,17 +4,20 @@ Microcirculatory Changes During Magnesium Sulphate Infusion in Sepsis
 Medical Centre Leeuwarden
 Medical Centre Leeuwarden
 Completed
-March 2010
-January 2011
+2010-03-01
+2011-01-01
 N/A
 Observational
 N/A
 14
 Severe Sepsis
 All
-18 Years
-N/A
+18
+
 Lithuania
-April 4, 2011
-April 11, 2011
-April 4, 2011
+2011-04-04
+2011-04-11
+2011-04-04
+microcirculation
+SDF
+magnesium sulfate
