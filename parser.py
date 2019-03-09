@@ -9,6 +9,7 @@ for file in filenames:
 
 	try:
 		url = tree.find('required_header/url').text
+		url = url.replace("'", "''")
 	except:
 		url = "N/A"
 
@@ -20,16 +21,19 @@ for file in filenames:
 
 	try:
 		brief_title = tree.find('brief_title').text
+		brief_title = brief_title.replace("'", "''")
 	except:
 		brief_title = "N/A"
 
 	try:
 		agency = tree.find('sponsors/lead_sponsor/agency').text
+		agency = agency.replace("'", "''")
 	except:
 		agency = "N/A"
 
 	try:
 		source = tree.find('source').text
+		source = source.replace("'", "''")
 	except:
 		source = "N/A"
 
@@ -70,6 +74,7 @@ for file in filenames:
 
 	try:
 		primary_purpose = tree.find('study_design_info/primary_purpose').text
+		primary_purpose = primary_purpose.replace("'", "''")
 	except:
 		primary_purpose = "N/A"
 
@@ -110,6 +115,7 @@ for file in filenames:
 
 	try:
 		country = tree.find('location_countries/country').text
+		country = country.replace("'", "''")
 	except:
 		country = "N/A"
 
@@ -150,7 +156,7 @@ for file in filenames:
 	if list != "N/A":
 		keywords = []
 		for item in list:
-			keywords.append(item.text)
+			keywords.append(item.text.replace("'", "''"))
 
 	script = open('fill_tables.sql', 'a', encoding='utf-8')
 
