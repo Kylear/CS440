@@ -44,23 +44,17 @@ for file in filenames:
 
 	try:
 		start_date = tree.find('start_date').text
-		if start_date == "N/A":
-			start_date = "NULL"
-		else:
-			temp_date = datetime.strptime(start_date, '%B %Y').strftime('%Y-%m-01')
-			start_date = temp_date
+		temp_date = datetime.strptime(start_date, '%B %Y').strftime('%Y-%m-01')
+		start_date = temp_date
 	except:
-		start_date = "NULL"
+		start_date = "N/A"
 
 	try:
 		completion_date = tree.find('completion_date').text
-		if completion_date == "N/A":
-			completion_date = "NULL"
-		else:
-			temp_date = datetime.strptime(completion_date, '%B %Y').strftime('%Y-%m-01')
-			completion_date = temp_date
+		temp_date = datetime.strptime(completion_date, '%B %Y').strftime('%Y-%m-01')
+		completion_date = temp_date
 	except:
-		completion_date = "NULL"
+		completion_date = "N/A"
 
 	try:
 		phase = tree.find('phase').text
@@ -121,33 +115,24 @@ for file in filenames:
 
 	try:
 		study_first_submitted = tree.find('study_first_submitted').text
-		if study_first_submitted == "N/A":
-			study_first_submitted = "NULL"
-		else:
-			temp_date = datetime.strptime(study_first_submitted, '%B %d, %Y').strftime('%Y-%m-%d')
-			study_first_submitted = temp_date
+		temp_date = datetime.strptime(study_first_submitted, '%B %d, %Y').strftime('%Y-%m-%d')
+		study_first_submitted = temp_date
 	except:
-		study_first_submitted = "NULL"
+		study_first_submitted = "N/A"
 
 	try:
 		study_first_posted = tree.find('study_first_posted').text
-		if study_first_posted == "N/A":
-			study_first_posted = "NULL"
-		else:
-			temp_date = datetime.strptime(study_first_posted, '%B %d, %Y').strftime('%Y-%m-%d')
-			study_first_posted = temp_date
+		temp_date = datetime.strptime(study_first_posted, '%B %d, %Y').strftime('%Y-%m-%d')
+		study_first_posted = temp_date
 	except:
-		study_first_posted = "NULL"
+		study_first_posted = "N/A"
 
 	try:
 		last_update_submitted = tree.find('last_update_submitted').text
-		if last_update_submitted == "N/A":
-			last_update_submitted = "NULL"
-		else:
-			temp_date = datetime.strptime(last_update_submitted, '%B %d, %Y').strftime('%Y-%m-%d')
-			last_update_submitted = temp_date
+		temp_date = datetime.strptime(last_update_submitted, '%B %d, %Y').strftime('%Y-%m-%d')
+		last_update_submitted = temp_date
 	except:
-		last_update_submitted = "NULL"
+		last_update_submitted = "N/A"
 
 	try:
 		list = tree.findall('keyword')

@@ -7,8 +7,8 @@ CREATE TABLE `trials` (
   `lead_sponsor` varchar(100) NOT NULL,
   `source` varchar(100) NOT NULL,
   `status` varchar(20) NOT NULL,
-  `start_date` date,
-  `completion_date` date,
+  `start_date` date NOT NULL,
+  `completion_date` date NOT NULL,
   `phase` varchar(8) NOT NULL,
   `study_type` varchar(20) NOT NULL,
   `primary_purpose` varchar(20) NOT NULL,
@@ -17,10 +17,10 @@ CREATE TABLE `trials` (
   `gender` varchar(10) NOT NULL,
   `minimum_age` int(3),
   `maximum_age` int(3),
-  `country` varchar(50),
-  `study_first_submitted` date,
-  `study_first_posted` date,
-  `last_update_submitted` date,
+  `country` varchar(50) NOT NULL,
+  `study_first_submitted` date NOT NULL,
+  `study_first_posted` date NOT NULL,
+  `last_update_submitted` date NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
