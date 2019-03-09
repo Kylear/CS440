@@ -13,6 +13,7 @@ with open('output.txt', 'w') as out:
 
 	try:
 		nct_id = tree.find('id_info/nct_id').text
+		nct_id = nct_id[3:]
 	except:
 		nct_id = "N/A"
 	out.write("%s\n" % nct_id)
@@ -94,6 +95,12 @@ with open('output.txt', 'w') as out:
 	except:
 		minimum_age = "N/A"
 	out.write("%s\n" % minimum_age)
+
+	try:
+		maximum_age = tree.find('eligibility/maximum_age').text
+	except:
+		maximum_age = "N/A"
+	out.write("%s\n" % maximum_age)
 
 	try:
 		country = tree.find('location_countries/country').text
