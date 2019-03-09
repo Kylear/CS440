@@ -1,13 +1,7 @@
 import sys
 import xml.etree.ElementTree as ET
 
-#with open(sys.argv[1], 'r') as input:
-#	data = input.read()
-#	tree = ET.fromstring(data)
-
-# value = tree.find('tag').text
 # http://www.pythonlearn.com/html-007/cfbook014.html
-data = []
 tree = ET.parse(sys.argv[1])
 root = tree.getroot()
 empty = "N/A"
@@ -125,3 +119,5 @@ with open('output.txt', 'w') as out:
 	except:
 		last_update_submitted = "N/A"
 	out.write("%s\n" % last_update_submitted)
+
+out.close()
