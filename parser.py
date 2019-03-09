@@ -13,6 +13,7 @@ with open('output.txt', 'w') as out:
 
 	try:
 		nct_id = tree.find('id_info/nct_id').text
+		nct_id = nct_id[3:]
 	except:
 		nct_id = "N/A"
 	out.write("%s\n" % nct_id)
