@@ -148,4 +148,17 @@ with open('output.txt', 'w') as out:
                 last_update_submitted = temp_date
 	out.write("%s\n" % last_update_submitted)
 
+	try:
+		list = tree.findall('keyword')
+	except:
+		list = "N/A"
+
+	if list != "N/A":
+		keyword = []
+		for item in list:
+			keyword.append(item.text)
+	for word in keyword:
+		out.write("%s\n" % word)
+
+
 out.close()
