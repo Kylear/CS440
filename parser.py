@@ -97,6 +97,12 @@ with open('output.txt', 'w') as out:
 	out.write("%s\n" % minimum_age)
 
 	try:
+		maximum_age = tree.find('eligibility/maximum_age').text
+	except:
+		maximum_age = "N/A"
+	out.write("%s\n" % maximum_age)
+
+	try:
 		country = tree.find('location_countries/country').text
 	except:
 		country = "N/A"
