@@ -45,12 +45,10 @@ with open('output.txt', 'w') as out:
 
 	try:
 		start_date = tree.find('start_date').text
-	except:
-		start_date = "N/A"
-	if start_date != "N/A":
 		temp_date = datetime.strptime(start_date, '%B %Y').strftime('%Y-%m-01')
 		start_date = temp_date
-
+	except:
+		start_date = None
 	out.write("%s\n" % start_date)
 
 	try:
@@ -58,7 +56,7 @@ with open('output.txt', 'w') as out:
 		temp_date = datetime.strptime(completion_date, '%B %Y').strftime('%Y-%m-01')
 		completion_date = temp_date
 	except:
-		completion_date = "N/A"
+		completion_date = None
 	out.write("%s\n" % completion_date)
 
 	try:
@@ -99,9 +97,7 @@ with open('output.txt', 'w') as out:
 
 	try:
 		minimum_age = tree.find('eligibility/minimum_age').text
-		print(minimum_age)
 		minimum_age = minimum_age[:-6]
-		print(minimum_age)
 	except:
 		minimum_age = None
 	out.write("%s\n" % minimum_age)
@@ -116,7 +112,7 @@ with open('output.txt', 'w') as out:
 	try:
 		country = tree.find('location_countries/country').text
 	except:
-		country = "N/A"
+		country = None
 	out.write("%s\n" % country)
 
 	try:
@@ -132,7 +128,7 @@ with open('output.txt', 'w') as out:
 		temp_date = datetime.strptime(study_first_posted, '%B %d, %Y').strftime('%Y-%m-%d')
 		study_first_posted = temp_date
 	except:
-		study_first_posted = "N/A"
+		study_first_posted = None
 	out.write("%s\n" % study_first_posted)
 
 	try:
@@ -140,7 +136,7 @@ with open('output.txt', 'w') as out:
 		temp_date = datetime.strptime(last_update_submitted, '%B %d, %Y').strftime('%Y-%m-%d')
 		last_update_submitted = temp_date
 	except:
-		last_update_submitted = "N/A"
+		last_update_submitted = None
 	out.write("%s\n" % last_update_submitted)
 
 	try:
