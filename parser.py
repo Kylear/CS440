@@ -152,13 +152,15 @@ for file in filenames:
 		for item in list:
 			keywords.append(item.text)
 
-	script = open('fill_tables.sql', 'a')
+	script = open('fill_tables.sql', 'a', encoding='utf-8')
 
 	trials_sql = "INSERT INTO `trials` VALUES ("+nct_id+",'"+url+"','"+brief_title+"','"+agency+"','"+source+"','"+overall_status+"','"+start_date+"','"+completion_date+"','"+phase+"','"+study_type+"','"+primary_purpose+"',"+enrollment+",'"+condition+"','"+gender+"',"+minimum_age+","+maximum_age+",'"+country+"','"+study_first_submitted+"','"+study_first_posted+"','"+last_update_submitted+"');\n"
+	#print(trials_sql)
 	script.write(trials_sql)
 
 	for word in keywords:
 		keywords_sql = "INSERT INTO `keywords` (study_id, keyword) VALUES ("+nct_id+",'"+word+"');\n"
+		#print(keywords_sql)
 		script.write(keywords_sql)
 
 	script.close()
