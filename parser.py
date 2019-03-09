@@ -4,7 +4,6 @@ import xml.etree.ElementTree as ET
 # http://www.pythonlearn.com/html-007/cfbook014.html
 tree = ET.parse(sys.argv[1])
 root = tree.getroot()
-empty = "N/A"
 with open('output.txt', 'w') as out:
 	try:
 		url = tree.find('required_header/url').text
