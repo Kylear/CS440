@@ -81,6 +81,7 @@ for file in filenames:
 
 	try:
 		condition = tree.find('condition').text
+		condition = condition.replace("'", "''")
 	except:
 		condition = "N/A"
 
