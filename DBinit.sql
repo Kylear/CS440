@@ -29,6 +29,6 @@ DROP TABLE IF EXISTS `keywords`;
 CREATE TABLE `keywords` (
   `id` int NOT NULL AUTO_INCREMENT,
   `study_id` int(8) NOT NULL,
-  `keyword` varchar(20) NOT NULL,
+  `keyword` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
