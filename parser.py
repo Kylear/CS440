@@ -1,5 +1,6 @@
 import sys
 import xml.etree.ElementTree as ET
+from datetime import datetime
 
 # http://www.pythonlearn.com/html-007/cfbook014.html
 tree = ET.parse(sys.argv[1])
@@ -46,12 +47,20 @@ with open('output.txt', 'w') as out:
 		start_date = tree.find('start_date').text
 	except:
 		start_date = "N/A"
+	if start_date != "N/A":
+		temp_date = datetime.strptime(start_date, '%B %Y').strftime('%Y-%m-01')
+		start_date = temp_date
+		
 	out.write("%s\n" % start_date)
 
 	try:
 		completion_date = tree.find('completion_date').text
 	except:
 		completion_date = "N/A"
+        if completion_date != "N/A":
+                temp_date = datetime.strptime(completion_date, '%B %Y').strftime('%Y-%m-01')
+                completion_date = temp_date
+
 	out.write("%s\n" % completion_date)
 
 	try:
@@ -112,18 +121,31 @@ with open('output.txt', 'w') as out:
 		study_first_submitted = tree.find('study_first_submitted').text
 	except:
 		study_first_submitted = "N/A"
+
+        if study_first_submitted != "N/A":
+                temp_date = datetime.strptime(study_first_submitted, '%B %d, %Y').strftime('%Y-%m-%d')
+                study_first_submitted = temp_date
+
 	out.write("%s\n" % study_first_submitted)
 
 	try:
 		study_first_posted = tree.find('study_first_posted').text
 	except:
 		study_first_posted = "N/A"
+
+        if study_first_posted != "N/A":
+                temp_date = datetime.strptime(study_first_posted, '%B %d, %Y').strftime('%Y-%m-%d')
+                study_first_posted = temp_date
+
 	out.write("%s\n" % study_first_posted)
 
 	try:
 		last_update_submitted = tree.find('last_update_submitted').text
 	except:
 		last_update_submitted = "N/A"
+        if last_update_submitted != "N/A":
+                temp_date = datetime.strptime(last_update_submitted, '%B %d, %Y').strftime('%Y-%m-%d')
+                last_update_submitted = temp_date
 	out.write("%s\n" % last_update_submitted)
 
 out.close()
