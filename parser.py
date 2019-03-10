@@ -106,6 +106,20 @@ for file in filenames:
 			minimum_age = minimum_age[:-6]
 		elif minimum_age[-2:] == "ek":
 			minimum_age = minimum_age[:-5]
+		elif minimum_age[-2:] == "hs":
+			minimum_age = minimum_age[:-7]
+		elif minimum_age[-2:] == "th":
+			minimum_age = minimum_age[:-6]
+		elif minimum_age[-2:] == "rs":
+			minimum_age = minimum_age[:-6]
+		elif minimum_age[-2:] == "ur":
+			minimum_age = minimum_age[:-5]
+		elif minimum_age[-2:] == "es":
+			minimum_age = minimum_age[:-8]
+		elif minimum_age[-2:] == "te":
+			minimum_age = minimum_age[:-7]
+		else:
+			minimum_age = "NULL"
 	except:
 		minimum_age = "NULL"
 
@@ -125,6 +139,20 @@ for file in filenames:
 			minimum_age = minimum_age[:-6]
 		elif minimum_age[-2:] == "ek":
 			minimum_age = minimum_age[:-5]
+		elif minimum_age[-2:] == "hs":
+			minimum_age = minimum_age[:-7]
+		elif minimum_age[-2:] == "th":
+			minimum_age = minimum_age[:-6]
+		elif minimum_age[-2:] == "rs":
+			minimum_age = minimum_age[:-6]
+		elif minimum_age[-2:] == "ur":
+			minimum_age = minimum_age[:-5]
+		elif minimum_age[-2:] == "es":
+			minimum_age = minimum_age[:-8]
+		elif minimum_age[-2:] == "te":
+			minimum_age = minimum_age[:-7]
+		else:
+			minimum_age = "NULL"
 	except:
 		maximum_age = "NULL"
 
