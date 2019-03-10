@@ -135,24 +135,24 @@ for file in filenames:
 			maximum_age = maximum_age[:-5]
 		elif maximum_age[-2:] == "ay":
 			maximum_age = maximum_age[:-4]
-		elif minimum_age[-2:] == "ks":
-			minimum_age = minimum_age[:-6]
-		elif minimum_age[-2:] == "ek":
-			minimum_age = minimum_age[:-5]
-		elif minimum_age[-2:] == "hs":
-			minimum_age = minimum_age[:-7]
-		elif minimum_age[-2:] == "th":
-			minimum_age = minimum_age[:-6]
-		elif minimum_age[-2:] == "rs":
-			minimum_age = minimum_age[:-6]
-		elif minimum_age[-2:] == "ur":
-			minimum_age = minimum_age[:-5]
-		elif minimum_age[-2:] == "es":
-			minimum_age = minimum_age[:-8]
-		elif minimum_age[-2:] == "te":
-			minimum_age = minimum_age[:-7]
+		elif maximum_age[-2:] == "ks":
+			maximum_age = maximum_age[:-6]
+		elif maximum_age[-2:] == "ek":
+			maximum_age = maximum_age[:-5]
+		elif maximum_age[-2:] == "hs":
+			maximum_age = maximum_age[:-7]
+		elif maximum_age[-2:] == "th":
+			maximum_age = maximum_age[:-6]
+		elif maximum_age[-2:] == "rs":
+			maximum_age = maximum_age[:-6]
+		elif maximum_age[-2:] == "ur":
+			maximum_age = maximum_age[:-5]
+		elif maximum_age[-2:] == "es":
+			maximum_age = maximum_age[:-8]
+		elif maximum_age[-2:] == "te":
+			maximum_age = maximum_age[:-7]
 		else:
-			minimum_age = "NULL"
+			maximum_age = "NULL"
 	except:
 		maximum_age = "NULL"
 
