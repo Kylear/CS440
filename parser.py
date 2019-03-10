@@ -94,10 +94,14 @@ for file in filenames:
 		minimum_age = tree.find('eligibility/minimum_age').text
 		if minimum_age == "N/A":
 			minimum_age = "NULL"
-		elif minimum_age[-1:] == "s":
+		elif minimum_age[-2:] == "rs":
 			minimum_age = minimum_age[:-6]
-		else:
+		elif minimum_age[-2:] == "ar":
 			minimum_age = minimum_age[:-5]
+		elif minimum_age[-2:] == "ys":
+			minimum_age = minimum_age[:-5]
+		elif minimum_age[-2:] == "ay":
+			minimum_age = minimum_age[:-4]
 	except:
 		minimum_age = "NULL"
 
@@ -105,10 +109,14 @@ for file in filenames:
 		maximum_age = tree.find('eligibility/maximum_age').text
 		if maximum_age == "N/A":
 			maximum_age = "NULL"
-		elif maximum_age[-1:] == "s":
+		elif maximum_age[-2:] == "rs":
 			maximum_age = maximum_age[:-6]
-		else:
+		elif maximum_age[-2:] == "ar":
 			maximum_age = maximum_age[:-5]
+		elif maximum_age[-2:] == "ys":
+			maximum_age = maximum_age[:-5]
+		elif maximum_age[-2:] == "ay":
+			maximum_age = maximum_age[:-4]
 	except:
 		maximum_age = "NULL"
 
