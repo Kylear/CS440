@@ -102,6 +102,10 @@ for file in filenames:
 			minimum_age = minimum_age[:-5]
 		elif minimum_age[-2:] == "ay":
 			minimum_age = minimum_age[:-4]
+		elif minimum_age[-2:] == "ks":
+			minimum_age = minimum_age[:-6]
+		elif minimum_age[-2:] == "ek":
+			minimum_age = minimum_age[:-5]
 	except:
 		minimum_age = "NULL"
 
@@ -117,6 +121,10 @@ for file in filenames:
 			maximum_age = maximum_age[:-5]
 		elif maximum_age[-2:] == "ay":
 			maximum_age = maximum_age[:-4]
+		elif minimum_age[-2:] == "ks":
+			minimum_age = minimum_age[:-6]
+		elif minimum_age[-2:] == "ek":
+			minimum_age = minimum_age[:-5]
 	except:
 		maximum_age = "NULL"
 
