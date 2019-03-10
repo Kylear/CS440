@@ -95,7 +95,11 @@ for file in filenames:
 		if minimum_age == "N/A":
 			minimum_age = "NULL"
 		else:
-			minimum_age = minimum_age[:-6]
+			tmp = minimum_age[:-6]
+			if tmp == " Years":
+				minimum_age = tmp
+			else:
+				minimum_age = minimum_age[:-5]
 	except:
 		minimum_age = "NULL"
 
@@ -104,7 +108,11 @@ for file in filenames:
 		if maximum_age == "N/A":
 			maximum_age = "NULL"
 		else:
-			maximum_age = maximum_age[:-6]
+			tmp = maximum_age[:-6]
+			if tmp == " Years":
+				maximum_age = tmp
+			else:
+				maximum_age = maximum_age[:-5]
 	except:
 		maximum_age = "NULL"
 
