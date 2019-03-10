@@ -190,7 +190,10 @@ for file in filenames:
 	if list != "N/A":
 		keywords = []
 		for item in list:
-			keywords.append(item.text.replace("'", "''"))
+			if item.text[-1:] == ",":
+				keywords.append(item.text[:-1].replace("'", "''"))
+			else:
+				keywords.append(item.text.replace("'", "''"))
 
 	script = open('fill_tables.sql', 'a', encoding='utf-8')
 
